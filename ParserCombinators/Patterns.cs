@@ -52,31 +52,12 @@ public static class Patterns {
 		Sequence(elems.Select(IgnoreLeadingWhitespace).ToArray());
 
 	public static Pattern TupleSequence(Type[] types, params Pattern[] elems) {
-		Type tupleType;
-		switch(types.Length) {
-			case 2:
-				tupleType = typeof(ValueTuple<,>);
-				break;
-			case 3:
-				tupleType = typeof(ValueTuple<,,>);
-				break;
-			case 4:
-				tupleType = typeof(ValueTuple<,,,>);
-				break;
-			case 5:
-				tupleType = typeof(ValueTuple<,,,,>);
-				break;
-			case 6:
-				tupleType = typeof(ValueTuple<,,,,,>);
-				break;
-			case 7:
-				tupleType = typeof(ValueTuple<,,,,,,>);
-				break;
-			case 8:
-				tupleType = typeof(ValueTuple<,,,,,,,>);
-				break;
-			default: throw new NotImplementedException();
-		}
+		var tupleType = types.Length switch {
+			2 => typeof(ValueTuple<,>), 3 => typeof(ValueTuple<,,>), 4 => typeof(ValueTuple<,,,>),
+			5 => typeof(ValueTuple<,,,,>), 6 => typeof(ValueTuple<,,,,,>),
+			7 => typeof(ValueTuple<,,,,,,>), 8 => typeof(ValueTuple<,,,,,,,>),
+			_ => throw new NotImplementedException()
+		};
 
 		return text => {
 			var list = new List<dynamic>();

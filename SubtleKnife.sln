@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compiler", "Compiler\Compil
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParserCombinators", "ParserCombinators\ParserCombinators.csproj", "{8FC7319B-513F-448D-815A-94C37F0D024E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EbnfGenerator", "EbnfGenerator\EbnfGenerator.csproj", "{EF710D8D-71B8-41F3-B264-727F1C94C3D0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{8FC7319B-513F-448D-815A-94C37F0D024E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FC7319B-513F-448D-815A-94C37F0D024E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8FC7319B-513F-448D-815A-94C37F0D024E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF710D8D-71B8-41F3-B264-727F1C94C3D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF710D8D-71B8-41F3-B264-727F1C94C3D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF710D8D-71B8-41F3-B264-727F1C94C3D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF710D8D-71B8-41F3-B264-727F1C94C3D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
